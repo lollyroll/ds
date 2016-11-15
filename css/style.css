@@ -24,23 +24,27 @@ body {
 .white {
 	color: #ffffff;
 }
+.about-castom {
+    background: #ffffff;
+    padding-bottom: 200px !important;
+    }
 .about-text {
 	padding-top: 3%;
 }
 .foto {
-	//background-size: 100%;
+    height: 256px;
+	background-size: 100%;
 	background-position:center;
 	background-repeat: no-repeat;
 	background-image: url(../img/111.jpg);
-	height: 256px;
-    background-size: 100%;
 }
 .skills {
-	padding-left: 20px;
+	font-size: 15px;
+    margin: -20px 0 0;
+    font-weight: normal;
 }
 .skills-list {
-	padding-left: 34px;
-	padding-left: 20px;
+    margin: 120px 0 0 -200px;
 }
 .simply-list {
 	display:inline-block;
@@ -49,8 +53,7 @@ body {
     margin: 21px 0 10px 32px;
 }
 .simply-list li {
-	float: left;
-	margin-right: 10px;
+	margin: 0;
 }
 .skills-list > li {
 	list-style: disc;
@@ -456,7 +459,7 @@ a.link:hover {
 .hello {
 	display: block;
 	font-size: 15px;
-	margin-top: 20px;
+	margin-top: 60px;
 }
 .iframe-text {
 	display: block;

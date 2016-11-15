@@ -38,18 +38,17 @@
 .logo-container {
     top: 10%;
     right: 5%;
-}
-.hello {
-    font-size: 20px;
-}
+} 
 .about-text {
     font-size: 18px;
     padding-left: 150px;
     margin: -155px 0px 10px 70px;
 }
 .skills {
-    padding: 45px 0 0;
-    font-size: 18px;
+    float: right;
+    font-size: 21px;
+    font-weight: normal;
+    padding: 0 1px 0 106px;
 }
 .skills-list {
     padding: 15px 0 0 20px;
@@ -60,6 +59,13 @@
     margin: 14px 14px 0;
     padding-left: 103px;
 }
+.foto {
+      background-size: 75%;
+    }
+ .hello {
+     font-size: 22px;
+     margin: -220px 0 0 230px;
+     }
 }
 
 @media all and (max-width: 875px) {
@@ -75,6 +81,22 @@ ul.menu li a.inner {
 }
 .footer-absolute {
 	position:static;
+}
+.hello {
+    margin: -166px 0 0;
+    font-size: 16px;
+}
+.foto {
+   background-size: 23%;
+   background-position: 10%;
+}
+.skills {
+    font-size: 15px !important;
+    padding: 0px 86px 0 0;
+    margin: -26px -60px 0 0;
+}
+.skills-list {
+    margin: 25px 0 0 -200px;
 }
 }
 
