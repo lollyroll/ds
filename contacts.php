@@ -1,6 +1,6 @@
 ﻿<?php
 /* Осуществляем проверку вводимых данных и их защиту от враждебных 
-скриптов хахаха */
+скриптов */
 $yourname = htmlspecialchars($_POST["yourname"]);
 $tema = htmlspecialchars($_POST["tema"]);
 $email = htmlspecialchars($_POST["email"]);
