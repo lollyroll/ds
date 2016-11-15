@@ -1,0 +1,296 @@
+
+@media all and (max-width: 1228px) {
+.three.columns {
+    width: 48%;
+}
+#blocks .column, #blocks .columns {
+    margin-left: 0px;
+}
+.portfolio-block.bouncy, .portfolio-block.adventurionsale {
+    margin: 40px 10px 40px 40px;
+}
+.portfolio-block.plextor, .portfolio-block.summer {
+    margin: 0 10px 40px 40px;
+}
+.bottom-text {
+    margin: 50px auto 0;
+}
+.top-text {
+    padding: 0;
+}
+.middle {
+    height: 500px;
+}
+.img-adventurionsale {
+    width: 40%;
+    height: auto;
+}
+.logo-container img {
+    width: 20%;
+    height: auto;
+}
+.top-block {
+    font-size: 14px;
+}
+.iframe-text {
+    font-size: 14px;
+}
+.logo-container {
+    top: 10%;
+    right: 5%;
+}
+.hello {
+    font-size: 20px;
+}
+.about-text {
+    font-size: 18px;
+    padding-left: 150px;
+    margin: -155px 0px 10px 70px;
+}
+.skills {
+    padding: 45px 0 0;
+    font-size: 18px;
+}
+.skills-list {
+    padding: 15px 0 0 20px;
+    font-size: 18px;
+}
+.copyright {
+    font-size: 12px;
+    margin: 14px 14px 0;
+    padding-left: 103px;
+}
+}
+
+@media all and (max-width: 875px) {
+ul.menu {
+    float: none;
+}
+ul.menu li a.inner {
+    font-size: 11px;
+}
+.bottom-close {
+    width: 12px;
+    height: 12px;
+}
+.footer-absolute {
+	position:static;
+}
+}
+
+@media all and (max-width: 816px) {
+.main_menu {
+    height: 100%;
+}
+ul.menu {
+    margin: 0 auto 0;
+    float: none;
+    padding: 0;
+}
+.three.columns {
+    width: 100%;
+}
+.portfolio-block {
+    padding: 155px;
+    margin: 30px 30px 0px 30px;
+}
+.portfolio-block.plextor {
+    margin-bottom: 30px;
+}
+.title {
+    line-height: 0.1;
+}
+.container {
+    padding: 0;
+}
+.footer-static {
+    width: 100%;
+    height: 100%;
+}
+.fb-icon {
+    margin: 4px 102px;
+}
+.in-icon {
+    margin: 4px -90px;
+}
+.block-bottom-website {
+    padding: 0;
+    width: 75%;
+    font-size: 14px;
+    margin-left: 28px;
+}
+.iframe-text {
+    margin: 0 0 15px 30px;
+}
+.portfolio-block {
+    margin: 10px 5px 0 5px !important;
+}
+.portfolio-block.plextor {
+    margin: 10px 5px 10px 5px !important;
+}
+.modal-iframe {
+    width: 80%;
+    margin-top: -43px;
+}
+.iframe-text {
+    font-size: 11px;
+    margin: 0px 0px 20px 0px;
+}
+.top-block {
+    padding: 0;
+    font-size: 12px;
+}
+.about-text {
+    font-size: 18px;
+    padding-left: 150px;
+    margin: -155px 0px 10px 70px;
+}
+.skills {
+    padding-left: 0px;
+    font-size: 18px;
+}
+.skills-list {
+    padding: 15px 0 0 20px;
+    font-size: 18px;
+}
+.copyright {
+    font-size: 12px;
+    margin: 14px 14px 0;
+    padding-left: 103px;
+}
+.fb-icon {
+    margin: 12px 12px;
+}
+.in-icon {
+    margin: 12px -9px;
+}
+.icon-logo {
+    top: 7px;
+    left: 13px;
+}
+.logo {
+    margin: 0 17%;
+    padding: 10px 0px 0 100px;
+}
+ul.menu li a.inner {
+    font-size: 14px;
+}
+.bottom-close {
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+}
+
+@media all and (max-width: 750px) {
+.footer {
+    position: fixed;
+	bottom:0;
+}
+.hello {
+    font-size: 15px;
+}
+.about-text {
+    font-size: 13px;
+    padding-left: 115px;
+    margin: -120px 0px 5px 0;
+}
+.skills {
+    font-size: 13px;
+    padding: 5px 10px;
+}
+.skills-list > li {
+    font-size: 13px;
+}
+.copyright {
+    font-size: 9px;
+    margin: 14px 0;
+    padding-left: 3%;
+}
+a.logo {
+    padding: 10px 0 0 40px;
+}
+.icon-logo {
+    top: 7px;
+    left: -45px;
+}
+ul.menu li a.inner {
+    font-size: 10px;
+}
+.top-text {
+    font-size: 24px;
+}
+.middle-text {
+    font-size: 24px;
+}
+.bottom-text {
+    font-size: 12px;
+}
+ul.menu li a.inner {
+    font-size: 14px;
+}
+#hire-footer.footer-absolute {
+    color: #fff;
+    width: 100%;
+    height: 44px;
+    position: static;
+    background: #333333;
+}
+#hire-cont.container {
+    padding: 0 10px !important;
+}
+#contact-text.text {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 0 10px 0;
+}
+}
+
+@media all and (min-width: 750px) {
+#contact-footer.footer-static {
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    height: 44px;
+    position: absolute;
+    background: #333333;
+}
+}
+
+@media all and (max-width: 500px) {
+ul.menu li a.inner {
+    font-size: 8px;
+}
+.text {
+    padding: 0 0 20px 0;
+}
+.modal-iframe {
+    width: 80%;
+    margin-top: -100px;
+}
+.iframe-text {
+    font-size: 10px;
+    margin: 0 !important;
+}
+.iframe-text p {
+    margin: 5px 0 0 !important;
+}
+}
+
+@media all and (max-width: 320px) {
+.text {
+    padding: 0 0 20px 0;
+}
+.modal-iframe {
+    width: 80%;
+    margin-top: -100px;
+}
+.iframe-text {
+    font-size: 10px;
+    margin: 0 !important;
+}
+.iframe-text p {
+    margin: 5px 0 0 !important;
+}
+}
