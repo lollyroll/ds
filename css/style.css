@@ -41,9 +41,15 @@ body {
 .skills {
 	font-size: 15px;
     margin: -20px 0 0;
-    font-weight: normal;
 }
+.skills-ru {
+    margin: 5px 0 0;
+    font-weight: normal;
+    }
 .skills-list {
+    margin: 120px 0 0 -200px;
+}
+.skills-list-ru {
     margin: 120px 0 0 -200px;
 }
 .simply-list {
@@ -59,6 +65,11 @@ body {
 	list-style: disc;
 	font-weight:400;
 }
+.skills-list-ru > li {
+	list-style: disc;
+	font-weight:400;
+}
+
 .main_menu {
 	width: 100%;
 	height: 46px;
@@ -457,9 +468,10 @@ a.link:hover {
 	background: url(../img/in.png);
 }
 .hello {
-	display: block;
-	font-size: 15px;
-	margin-top: 60px;
+    display: block;
+    font-size: 15px;
+    margin-top: 80px;
+    font-weight: 300;
 }
 .iframe-text {
 	display: block;

@@ -38,7 +38,7 @@
 .logo-container {
     top: 10%;
     right: 5%;
-} 
+}
 .about-text {
     font-size: 18px;
     padding-left: 150px;
@@ -48,11 +48,20 @@
     float: right;
     font-size: 21px;
     font-weight: normal;
-    padding: 0 1px 0 106px;
+    padding: 18px 1px 0 90px;
+}
+.skills-ru {
+    padding: 25px 0 0 70px;
 }
 .skills-list {
-    padding: 15px 0 0 20px;
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 85px 0 0 -230px;
+}
+.skills-list-ru {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 25px 0 0 -250px;
 }
 .copyright {
     font-size: 12px;
@@ -60,12 +69,16 @@
     padding-left: 103px;
 }
 .foto {
-      background-size: 75%;
-    }
- .hello {
-     font-size: 22px;
-     margin: -220px 0 0 230px;
-     }
+    background-size: 75%;
+}
+.hello {
+    font-weight: normal;
+    font-size: 22px;
+    margin: -220px 0 0 0;
+}
+.contact-me {
+    margin-left: -82px;
+}
 }
 
 @media all and (max-width: 875px) {
@@ -80,22 +93,30 @@ ul.menu li a.inner {
     height: 12px;
 }
 .footer-absolute {
-	position:static;
+    position: static;
 }
 .hello {
-    margin: -166px 0 0;
     font-size: 16px;
+    margin: -191px 0 0;
 }
 .foto {
-   background-size: 23%;
-   background-position: 10%;
+    background-size: 28%;
+    background-position: 5% 39%;
 }
 .skills {
-    font-size: 15px !important;
-    padding: 0px 86px 0 0;
-    margin: -26px -60px 0 0;
+    font-size: 16px !important;
+    padding: 0px 64px 0 0;
+    margin: -14px -60px 0 0;
+}
+.skills-ru {
+    padding: 0;
+    margin: 11px 0;
+    font-size: 16px !important;
 }
 .skills-list {
+    margin: 45px 0 0 -200px;
+}
+.skills-list-ru {
     margin: 25px 0 0 -200px;
 }
 }
@@ -175,6 +196,14 @@ ul.menu {
     padding: 15px 0 0 20px;
     font-size: 18px;
 }
+.skills-ru {
+    padding-left: 0px;
+    font-size: 18px;
+}
+.skills-list-ru {
+    padding: 15px 0 0 20px;
+    font-size: 18px;
+}
 .copyright {
     font-size: 12px;
     margin: 14px 14px 0;
@@ -207,7 +236,7 @@ ul.menu li a.inner {
 @media all and (max-width: 750px) {
 .footer {
     position: fixed;
-	bottom:0;
+    bottom: 0;
 }
 .hello {
     font-size: 15px;
@@ -222,6 +251,13 @@ ul.menu li a.inner {
     padding: 5px 10px;
 }
 .skills-list > li {
+    font-size: 13px;
+}
+.skills-ru {
+    font-size: 13px;
+    padding: 5px 10px;
+}
+.skills-list-ru > li {
     font-size: 13px;
 }
 .copyright {
@@ -298,6 +334,52 @@ ul.menu li a.inner {
 .iframe-text p {
     margin: 5px 0 0 !important;
 }
+.skills {
+    font-size: 12px !important;
+    padding: 16px 68px;
+    margin: -30px -61px 0px -67px;
+}
+.skills-ru {
+    font-size: 12px !important;
+    padding: 0 69px;
+    margin: 5px -56px 0px -68px;
+}
+.hello {
+    font-size: 11px;
+    margin: -230px 0 -15px;
+}
+.foto {
+    background-size: 32% !important;
+    background-position: 4% 10% !important;
+}
+.simply-list li {
+    margin-left: -12px;
+}
+.skills-list > li {
+    margin-left: 87px;
+}
+.skills-list-ru > li {
+    margin-left: 87px;
+}
+.contact-me {
+    margin-left: -27px;
+}
+.about-castom {
+    padding-bottom: 41px !important;
+}
+.skills-list-ru {
+    margin: 0 0 0-208px;
+}
+.skills-list {
+    margin: 0 0 0-208px;
+    padding: 60px 0 0 20px;
+}
+}
+
+@media all and (max-width: 375px) {
+.foto {
+    background-size: 30% !important;
+}
 }
 
 @media all and (max-width: 320px) {
@@ -314,5 +396,21 @@ ul.menu li a.inner {
 }
 .iframe-text p {
     margin: 5px 0 0 !important;
+}
+.foto {
+    background-size: 32% !important;
+    background-position: 6% 4% !important;
+}
+.skills-ru {
+    font-size: 11px !important;
+    padding: 0 68px;
+    margin: 5px -67px 0px -68px;
+}
+.hello {
+    font-size: 11px;
+    margin: -260px 0 -15px;
+}
+.skills-list-ru > li {
+    margin-left: 87px;
 }
 }
