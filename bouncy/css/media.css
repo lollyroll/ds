@@ -47,6 +47,9 @@
 .icon-link-bottom {
     display: none;
 }
+.jssorb05.team-jssor {
+    bottom:40px !important;
+}
 .set-size {
     margin: 25% 30% 0 !important;
 }
@@ -131,7 +134,7 @@
     margin: 1% 0 20% -30%;
 }
 .team .top_slider {
-    margin: 15px 75px;
+    margin: 15px auto;
     }
  .text-center {
     text-align: center;
@@ -147,7 +150,10 @@
     width: 100%;
     font-size: 15px;
     margin: 0 0 5px 0;
+    padding-top:15px;
 }   
+.portho-image {
+    padding-top:20px}
 }
 
 @media (max-width: 414px) {

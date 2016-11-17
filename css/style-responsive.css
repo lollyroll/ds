@@ -48,7 +48,7 @@
     float: right;
     font-size: 21px;
     font-weight: normal;
-    padding: 18px 1px 0 90px;
+    padding: 18px 1px 0 80px;
 }
 .skills-ru {
     padding: 25px 0 0 70px;
@@ -56,12 +56,12 @@
 .skills-list {
     font-size: 22px;
     font-weight: normal;
-    margin: 85px 0 0 -230px;
+    margin: 85px 0 0 -245px;
 }
 .skills-list-ru {
     font-size: 22px;
     font-weight: normal;
-    margin: 25px 0 0 -250px;
+    margin: 25px 0 0 -190px;
 }
 .copyright {
     font-size: 12px;
@@ -69,7 +69,8 @@
     padding-left: 103px;
 }
 .foto {
-    background-size: 75%;
+    background-size: 65%;
+    background-position: 17% 100%;
 }
 .hello {
     font-weight: normal;
@@ -78,6 +79,9 @@
 }
 .contact-me {
     margin-left: -82px;
+}
+.about-castom {
+    padding-bottom: 0 !important;
 }
 }
 
@@ -93,7 +97,7 @@ ul.menu li a.inner {
     height: 12px;
 }
 .footer-absolute {
-    position: static;
+    position: fixed;
 }
 .hello {
     font-size: 16px;
@@ -105,7 +109,7 @@ ul.menu li a.inner {
 }
 .skills {
     font-size: 16px !important;
-    padding: 0px 64px 0 0;
+    padding: 0 70px 0 0;
     margin: -14px -60px 0 0;
 }
 .skills-ru {
@@ -231,6 +235,7 @@ ul.menu li a.inner {
     right: 0;
     position: absolute;
 }
+
 }
 
 @media all and (max-width: 750px) {
@@ -362,7 +367,7 @@ ul.menu li a.inner {
     margin-left: 87px;
 }
 .contact-me {
-    margin-left: -27px;
+    margin-left: -45px;
 }
 .about-castom {
     padding-bottom: 41px !important;
@@ -374,11 +379,23 @@ ul.menu li a.inner {
     margin: 0 0 0-208px;
     padding: 60px 0 0 20px;
 }
+.bottom-feather {
+    margin-top: 135px;
+}
+.padd {
+    padding: 0 !important;
+}
 }
 
 @media all and (max-width: 375px) {
 .foto {
     background-size: 30% !important;
+}
+.bottom-feather {
+    margin-top: 65px;
+}
+.padd {
+    padding: 0 13px 0 13px !important;
 }
 }
 
@@ -412,5 +429,15 @@ ul.menu li a.inner {
 }
 .skills-list-ru > li {
     margin-left: 87px;
+}
+.contact-me {
+    margin-left: -60px;
+}
+.bottom-feather {
+    margin-top: -20px;
+    padding-bottom: 150px;
+}
+.padd {
+    padding: 0 5px 0 5px !important;
 }
 }
