@@ -78,25 +78,25 @@
     о себе
     "
     . </div>
-  <form id="contact" action="contacts.php" method="post">
+  <form id="contact" action="contacts-ru.php" method="post">
     <div class="row">
       <div class="six columns">
         <label for="YorName">Ваше имя</label>
-        <input class="u-full-width" type="email" placeholder="Щербина Денис" id="YourName" required="">
+        <input class="u-full-width" type="text" placeholder="Щербина Денис" id="YourName" name="yourname" required="">
       </div>
       <div class="six columns">
         <label for="YorWebsite">Ваш веб сайт</label>
-        <input class="u-full-width" type="email" placeholder="shcherbina.com" id="YourWebsite">
+        <input class="u-full-width" type="text" placeholder="shcherbina.com" id="YourWebsite" name="your_website">
       </div>
     </div>
     <div class="row">
       <div class="six columns">
         <label for="EmailInput">Ваш email</label>
-        <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="EmailInput" required="">
+        <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="EmailInput" name="email" required="" >
       </div>
       <div class="six columns">
         <label for="exampleRecipientInput">Причина обращения</label>
-        <select class="u-full-width" id="exampleRecipientInput">
+        <select class="u-full-width" id="exampleRecipientInput" name="tema">
           <option value="Option 1">Вопрос</option>
           <option value="Option 2">Оставить отзыв</option>
           <option value="Option 3">Могу я получить ваш номер?</option>
@@ -104,12 +104,12 @@
       </div>
     </div>
     <label for="exampleMessage">Сообщение</label>
-    <textarea class="u-full-width" placeholder="Добрый день …" id="exampleMessage" style="resize:none; width:100%; height:150px;"></textarea>
+    <textarea class="u-full-width" placeholder="Добрый день …" id="exampleMessage" name="message" style="resize:none; width:100%; height:150px;"></textarea>
     <label class="example-send-yourself-copy">
-      <input type="checkbox">
+      <input type="checkbox" id="check" name="checkbox">
       <span class="label-body">Отправить копию себе</span>
     </label>
-    <input class="button-primary button-custom" type="submit" value="Отправить" >
+    <input class="button-primary button-custom" type="submit" value="Отправить" name="from">
     <input type="text" class="hidden" name="spam">
   </form>
 </div>
