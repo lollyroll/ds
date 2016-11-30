@@ -21,7 +21,6 @@
 <script type="text/javascript" src="js/smooth_scrolling.js"></script>
 <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
 </head>
-
 <body>
 <div class="main_menu">
   <div class="container">
@@ -51,9 +50,11 @@
         </a>
       </li>
       <li>
-      <div class="button-lang">
-        <span class="eng">Eng</span>
-        <a class="ru" href="index-ru.html">Ru</a>
+        <div class="button-lang">
+          <span class="eng">Eng</span>
+          <a class="ru" href="index-ru.html">
+            Ru
+          </a>
         </div>
       </li>
     </ul>
@@ -61,10 +62,7 @@
 </div>
 <div class="clear"></div>
 <div class="container padd">
-  <div id="contact-text" class="text roboto">To start working with me, please click
-    <a href="Hire.html" class="link-form">
-      here.
-    </a>
+  <div id="contact-text" class="text roboto">To start working with me, please fill out this form.
     To see my work, go to the tab
     "
     portfolio
@@ -74,40 +72,46 @@
     About Me
     "
     . </div>
-  <form id="contact" action="contacts.php" method="post">
+  <!-- new code starts -->
+  <form  id="contact" action="contacts.php" enctype="multipart/form-data" method="post">
     <div class="row">
       <div class="six columns">
         <label for="YorName">Your Name</label>
-        <input class="u-full-width" type="text" placeholder="Shcherbina Denis" id="YourName" name="yourname" required="">
+        <input class="u-full-width" type="text" placeholder="John doe" id="YourName" name="yourname" required="">
       </div>
       <div class="six columns">
         <label for="YorWebsite">Your website</label>
-        <input class="u-full-width" type="text" placeholder="shcherbina.com" id="YourWebsite" name="your_website">
+        <input class="u-full-width" type="text" placeholder="www.test.com" id="YourWebsite" name="your_website">
       </div>
     </div>
     <div class="row">
       <div class="six columns">
         <label for="EmailInput">Your email</label>
-        <input class="u-full-width" type="text" placeholder="topbike-spb@yandex.ru" id="EmailInput" name="email" required="">
+        <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="EmailInput" name="email" required="">
       </div>
       <div class="six columns">
         <label for="exampleRecipientInput">Reason for contacting</label>
         <select class="u-full-width" id="exampleRecipientInput" name="tema">
-          <option value="Option 1">Question</option>
-          <option value="Option 2">Admiration</option>
-          <option value="Option 3">Can I get your number?</option>
+          <option value="Question">Question</option>
+          <option value="Admiration">Admiration</option>
         </select>
       </div>
     </div>
     <label for="exampleMessage">Message</label>
-    <textarea class="u-full-width" placeholder="Hi Denis ..." id="exampleMessage" name="message" style="resize:none; width:100%; height:150px;"></textarea>
-    <label class="example-send-yourself-copy">
-      <input type="checkbox" id="check" name="checkbox">
-      <span class="label-body">Send a copy to yourself</span>
-    </label>
-    <input class="button-primary button-custom" type="submit" value="SUBMIT" name="from">
-        <input type="text" class="hidden" name="spam">
+    <textarea class="u-full-width" placeholder="Hi John ..." id="exampleMessage" name="message" style="resize:none; width:100%; height:150px;"></textarea>
+    <div class="upload-file">
+     <input type="file" name="fileFF">
+    </div>
+    <div class="button-send">
+      <label class="example-send-yourself-copy">
+        <input type="checkbox" id="check" name="checkbox">
+        <span class="label-body">Send a copy to yourself</span>
+      </label>
+      <input class="button-primary button-custom" type="submit" value="SUBMIT" name="from">
+    </div>
+    <input type="text" class="hidden" name="spam">
   </form>
+  <!-- end of new code -->
 </div>
 <div id="contact-footer" class="footer-static">
   <div class="container">

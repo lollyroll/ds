@@ -21,7 +21,6 @@
 <script type="text/javascript" src="js/smooth_scrolling.js"></script>
 <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
 </head>
-
 <body>
 <div class="main_menu">
   <div class="container">
@@ -56,7 +55,12 @@
         </a>
       </li>
       <li>
-        <div class="button-lang"> <a class="eng" href="index.html">Eng</a> <span class="ru">Ru</span> </div>
+        <div class="button-lang">
+          <a class="eng" href="index.html">
+            Eng
+          </a>
+          <span class="ru">Ru</span>
+        </div>
       </li>
     </ul>
   </div>
@@ -75,15 +79,13 @@ $your_website = htmlspecialchars($_POST["your_website"]);
 $checkbox = htmlspecialchars($_POST["checkbox"]);
 $spam = $_POST['spam']; // получим текст из поля спам
 /* Устанавливаем e-mail адресата */
-$myemail = "topbike-spb@yandex.ru";
+$myemail = "zolotuhinmolodez@gmail.com";
 /* Проверяем заполнены ли обязательные поля ввода, используя check_input 
 функцию */
 $yourname = check_input($_POST["yourname"], "Введите ваше имя!");
 $tema = check_input($_POST["tema"], "Укажите тему сообщения!");
 $email = check_input($_POST["email"], "Введите ваш e-mail!");
 $message = check_input($_POST["message"], "Вы забыли написать сообщение!");
-$your_website = check_input($_POST["your_website"], "Введите свой website!");
-
 /* Проверяем правильно ли записан e-mail */
 if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
 {
@@ -92,32 +94,37 @@ show_error("<br /> Е-mail адрес не существует");
 // условие проверки, если поле spam пустое, то форма обрабатывается, 
 //иначе выходим (для роботов)
 if (empty($spam)){ 
-$to= "topbike-spb@yandex.ru";
-$from = "no-replay@mail.com";
-$subject = "message for your site";
+$to = "zolotuhinmolodez@gmail.com"; // кому отправляем форму
+$from = "no-replay@mail.com"; // от кого отправлена форма
+$subject = "message for your site"; // тема сообщения
 $headers = "From: $from\r\nReplay-To: $from\r\nContent-type: text/plain; charset=utf-8\r\n";
-mail($to, $subject, $send, $headers);
+if (mail($myemail, $tema, $message_to_myemail, $from)) 
+{echo "";
+}else{
+    echo "Error! The letter was not sent!";}
 } else exit ;
 /* Создаем новую переменную, присвоив ей значение */
 $message_to_myemail = "Здравствуйте! 
 Вашей контактной формой было отправлено сообщение! 
 Имя отправителя: $yourname 
 E-mail: $email 
+Website: $your_website
+Тема обращения: $tema
 Текст сообщения: $message 
 Конец";
 /* Отправляем сообщение, используя mail() функцию */
 $from  = "From: $yourname <$email> \r\n Reply-To: $email \r\n"; 
-mail($myemail, $tema, $message_to_myemail, $from);
+if (mail($myemail, $tema, $message_to_myemail, $from)) 
+{echo "";
+}else{
+    echo "Error! The letter was not sent!";}    
 ?>
-    <p>Ваше сообщение было успешно отправлено!</p>
-    <p>На
-      <a href="index.html">
-        Главную
-        >
-        >
-        >
+    <div class="mail-send">
+      <p class="mail-text">Ваше сообщение было успешно отправлено!</p>
+      <a class="button-mail" href="index.html">
+        Вертуться на главную
       </a>
-    </p>
+    </div>
     <?php
 /* Если при заполнении формы были допущены ошибки сработает 
 следующий код: */
@@ -144,8 +151,9 @@ exit();
   </div>
 </div>
 <div id="contact-footer" class="footer-static">
- <div class="container">
-    <div class="copyright"> &#169; 
+  <div class="container">
+    <div class="copyright">
+      &#169; 
       2016 Щербина Денис. Все права соблюдены и защищены. </div>
     <a href="https://www.facebook.com/profile.php?id=100002466302500" class="fb-icon">
     </a>

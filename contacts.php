@@ -21,7 +21,6 @@
 <script type="text/javascript" src="js/smooth_scrolling.js"></script>
 <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
 </head>
-
 <body>
 <div class="main_menu">
   <div class="container">
@@ -82,45 +81,45 @@ $yourname = check_input($_POST["yourname"], "Enter your name!");
 $tema = check_input($_POST["tema"], "Specify the message subject!");
 $email = check_input($_POST["email"], "Enter your e-mail!");
 $message = check_input($_POST["message"], "You forgot to write a message!");
-$your_website = check_input($_POST["your_website"], "Enter your website!");
-
 /* Проверяем правильно ли записан e-mail */
 if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
 {
-show_error("<br /> E-mail address does not exist");
+show_error("<br /> Е-mail адрес не существует");
 }
 // условие проверки, если поле spam пустое, то форма обрабатывается, 
 //иначе выходим (для роботов)
 if (empty($spam)){ 
-$to= "topbike-spb@yandex.ru";
-$from = "no-replay@mail.com";
-$subject = "message for your site";
-$headers = "From: $from\r\nReplay-To: $from\r\nContent-type: text/plain; charset=utf-8\r\n";
+$to = "zolotuhinmolodez@gmail.com"; // кому отправляем форму
+$from = "no-replay@mail.com"; // от кого отправлена форма
+$subject = "message for your site"; // тема сообщения
+$headers = "From: $from\r\nReplay-To: $from\r\nContent-type: text/plain; charset=utf-8\r\n";                              
 if (mail($myemail, $tema, $message_to_myemail, $from)) 
-{echo "Letter sent!";
+{echo "";
 }else{
     echo "Error! The letter was not sent!";}
 } else exit ;
 /* Создаем новую переменную, присвоив ей значение */
 $message_to_myemail = "Hello!
 Your contact form has been sent a message!
-Sender Name: $ yourname
-E-mail: $ email
-Message: $ message
+Sender Name: $yourname
+E-mail: $email
+Website: $your_website
+Reason for contacting: $tema
+Message: $message
 the end";
 /* Отправляем сообщение, используя mail() функцию */
-$from  = "From: $yourname <$email> \r\n Reply-To: $email \r\n"; 
-mail($myemail, $tema, $message_to_myemail, $from);
+  $from  = "From: $yourname <$email> \r\n Reply-To: $email \r\n"; 
+if (mail($myemail, $tema, $message_to_myemail, $from)) {
+    echo "";
+}else{
+    echo "Error! The letter was not sent!";}    
 ?>
-    <p>Your message has been successfully sent!</p>
-    <p>back to
-      <a href="index.html">
-        main page
-        >
-        >
-        >
+    <div class="mail-send">
+      <p class="mail-text">Your message has been successfully sent!</p>
+      <a class="button-mail" href="index.html">
+        back to main page
       </a>
-    </p>
+    </div>
     <?php
 /* Если при заполнении формы были допущены ошибки сработает 
 следующий код: */
@@ -142,6 +141,38 @@ function show_error($myError)
     <?php echo $myError; ?>
     <?php
 exit();
+}
+?>
+    <?php
+if($_FILES['fileFF']['size'] > 0) {
+  $output = '<h1>Спасибо! Ваш файл получен.</h1>';
+  $to = "zolotuhinmolodez@gmail.com"; // адрес почты получателя
+  $from = "no-replay@mail.com"; // адрес почты отправителя
+  $subject = "Заголовок письма";
+  $message = "Содержимое письма";
+  $attachment = chunk_split(base64_encode(file_get_contents($_FILES['fileFF']['tmp_name'])));
+  $filename = $_FILES['fileFF']['name'];
+  $filetype = $_FILES['fileFF']['type'];
+  $boundary = md5(date('r', time())); // рандомное число
+  $headers = "From: " . $from . "\r\n"; // см. наиболее часто используемые заголовки
+  $headers .= "Reply-To: " . $from . "\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-Type: multipart/mixed; boundary=\"_1_$boundary\"";
+  $message="
+--_1_$boundary
+Content-Type: multipart/alternative; boundary=\"_2_$boundary\"
+--_2_$boundary
+Content-Type: text/plain; charset=\"utf-8\"
+Content-Transfer-Encoding: 7bit
+$message
+--_2_$boundary--
+--_1_$boundary
+Content-Type: \"$filetype\"; name=\"$filename\"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment // содержимое является вложенным
+$attachment
+--_1_$boundary--";
+  mail($to, $subject, $message, $headers);
 }
 ?>
   </div>
