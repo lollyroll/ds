@@ -60,14 +60,21 @@
 </div>
 <div class="clear"></div>
 <div class="container padd">
-<form>
-<label for="exampleMessage">Leave your testimonial</label>
-    <textarea class="u-full-width" placeholder="Please enter the testimonial you want to submit" id="exampleMessage" style="resize:none; width:100%; height:150px;"></textarea>
-    <label class="example-send-yourself-copy">
-      <input type="checkbox">
-      <span class="label-body">Send a copy to yourself</span>
-    </label>
-    <input class="button-primary button-custom" type="submit" value="SUBMIT" >
+<form name="comment" action="testimonials.php" enctype="multipart/form-data" method="post">
+   <label for="exampleMessage">Leave your testimonial</label>
+  <p>
+    <label>Имя:</label>
+    <input type="text" name="name" />
+  </p>
+  <p>
+    <label>Комментарий:</label>
+    <br />
+    <textarea class="u-full-width" placeholder="Пожалуйста, оставте свой отзыв" id="exampleMessage" name="text_comment" style="resize:none; width:100%; height:150px;"></textarea>
+  </p>
+  <p>
+    <input type="hidden" name="page_id" value="150" />
+    <input type="submit" value="Отправить" />
+  </p> 
 </form>
 </div>
 <div class="footer-absolute">
