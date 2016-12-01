@@ -73,7 +73,7 @@ $your_website = htmlspecialchars($_POST["your_website"]);
 $checkbox = htmlspecialchars($_POST["checkbox"]);
 $spam = $_POST['spam']; // получим текст из поля спам
 /* Устанавливаем e-mail адресата */
-$myemail = "lerafree@ya.ru";
+$myemail = "zolotuhinmolodez@gmail.com";
 /* Проверяем заполнены ли обязательные поля ввода, используя check_input 
 функцию */
 $yourname = check_input($_POST["yourname"], "Enter your name!");
@@ -88,35 +88,10 @@ show_error("<br /> Е-mail адрес не существует");
 // условие проверки, если поле spam пустое, то форма обрабатывается, 
 //иначе выходим (для роботов)
 if (empty($spam)){ 
-$to = "lerafree@ya.ru"; // кому отправляем форму
+$to = "zolotuhinmolodez@gmail.com"; // кому отправляем форму
 $from = "no-replay@mail.com"; // от кого отправлена форма
 $subject = "message for your site"; // тема сообщения
-$headers = "From: $from\r\nReplay-To: $from\r\nContent-type: text/plain; charset=utf-8\r\n";   
-if($_FILES['fileFF']['size'] > 0) {
-  $attachment = chunk_split(base64_encode(file_get_contents($_FILES['fileFF']['tmp_name'])));
-  $filename = $_FILES['fileFF']['name'];
-  $filetype = $_FILES['fileFF']['type'];
-  $boundary = md5(date('r', time())); // рандомное число
-  $headers = "From: " . $from . "\r\n"; // см. наиболее часто используемые заголовки
-  $headers .= "Reply-To: " . $from . "\r\n";
-  $headers .= "MIME-Version: 1.0\r\n";
-  $headers .= "Content-Type: multipart/mixed; boundary=\"_1_$boundary\"";
-  $messages="
---_1_$boundary
-Content-Type: multipart/alternative; boundary=\"_2_$boundary\"
---_2_$boundary
-Content-Type: text/plain; charset=\"utf-8\"
-Content-Transfer-Encoding: 7bit
-$messages
---_2_$boundary--
---_1_$boundary
-Content-Type: \"$filetype\"; name=\"$filename\"
-Content-Transfer-Encoding: base64
-Content-Disposition: attachment // содержимое является вложенным
-$attachment
---_1_$boundary--";
-  mail($myemail, $tema, $message_to_myemail, $from, $messages);
-}                           
+$headers = "From: $from\r\nReplay-To: $from\r\nContent-type: text/plain; charset=utf-8\r\n";                              
 if (mail($myemail, $tema, $message_to_myemail, $from)) 
 {echo "";
 }else{
@@ -130,10 +105,13 @@ E-mail: $email
 Website: $your_website
 Reason for contacting: $tema
 Message: $message
-$messages
 the end";
 /* Отправляем сообщение, используя mail() функцию */
   $from  = "From: $yourname <$email> \r\n Reply-To: $email \r\n"; 
+if (mail($myemail, $tema, $message_to_myemail, $from)) {
+    echo "";
+}else{
+    echo "Error! The letter was not sent!";}    
 ?>
     <div class="mail-send">
       <p class="mail-text">Your message has been successfully sent!</p>
@@ -164,7 +142,38 @@ function show_error($myError)
 exit();
 }
 ?>
-
+    <?php
+if($_FILES['fileFF']['size'] > 0) {
+  $output = '<h1>Спасибо! Ваш файл получен.</h1>';
+  $to = "zolotuhinmolodez@gmail.com"; // адрес почты получателя
+  $from = "no-replay@mail.com"; // адрес почты отправителя
+  $subject = "Заголовок письма";
+  $message = "Содержимое письма";
+  $attachment = chunk_split(base64_encode(file_get_contents($_FILES['fileFF']['tmp_name'])));
+  $filename = $_FILES['fileFF']['name'];
+  $filetype = $_FILES['fileFF']['type'];
+  $boundary = md5(date('r', time())); // рандомное число
+  $headers = "From: " . $from . "\r\n"; // см. наиболее часто используемые заголовки
+  $headers .= "Reply-To: " . $from . "\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-Type: multipart/mixed; boundary=\"_1_$boundary\"";
+  $message="
+--_1_$boundary
+Content-Type: multipart/alternative; boundary=\"_2_$boundary\"
+--_2_$boundary
+Content-Type: text/plain; charset=\"utf-8\"
+Content-Transfer-Encoding: 7bit
+$message
+--_2_$boundary--
+--_1_$boundary
+Content-Type: \"$filetype\"; name=\"$filename\"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment // содержимое является вложенным
+$attachment
+--_1_$boundary--";
+  mail($to, $subject, $message, $headers);
+}
+?>
   </div>
 </div>
 <div id="contact-footer" class="footer-static">
