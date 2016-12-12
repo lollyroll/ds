@@ -1,5 +1,5 @@
-	$(document).ready(function(){  
-	$("a[rel*=leanModal]").leanModal({ top : 100, overlay : 0.4, closeButton: ".bottom-close" });
+$(document).ready(function(){  
+$("a[rel*=leanModal]").leanModal({ top : 100, overlay : 0.4, closeButton: ".bottom-close" });
      
 //Добавление в форму отправки комментария значений id родительских комментариев
 function comm_on(p_id,first_p){

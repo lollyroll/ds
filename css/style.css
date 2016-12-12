@@ -166,6 +166,49 @@ a.logo {
 a.logo:hover {
     color: #d9d9d9 !important;
 }
+.button-sign {
+    width: 70px;
+    display: block;
+    border: 1px solid;
+    border-radius: 2px;
+    margin: 0 2px 0 10px;
+    border-color: #999999;
+    text-decoration: none;
+    background-color: #404040;
+    text-transform: uppercase;
+    color: #999999 !important;
+    font-size: 11px !important;
+    line-height: 21px !important;
+    padding-left: 4px !important;
+}
+.lock {
+    background-image: url(../img/lock-1.png);
+    background-repeat: no-repeat;
+    background-position: 81%;
+    background-size: 16px 20px;
+}
+.open {
+    background-image: url(../img/lock-2.png);
+    background-repeat: no-repeat;
+    background-position: 97%;
+    background-size: 25px 21px;
+}
+.button-sign a:hover {
+    color: #ffffff !important;
+}
+.button-sign span {
+    display: block
+}
+.button-sign a {
+    display: none
+}
+.button-sign:hover a {
+    display: block;
+    text-decoration: none
+}
+.button-sign:hover span {
+    display: none
+}
 .button-lang {
     width: 50px;
     display: block;
@@ -177,7 +220,7 @@ a.logo:hover {
     text-transform: uppercase;
     color: #999999 !important;
     font-size: 11px !important;
-    line-height: 20px !important;
+    line-height: 21px !important;
     padding-left: 7px !important;
 }
 .ru {
@@ -524,18 +567,21 @@ input.hidden {
     color: #19D9DC;
 }
 .add_comment {
+    width: 100%;
     display: table;
-    width: 580px;
-    border: 1px solid #000;
-    background-color: #6AF;
 }
 .close_hint, .open_hint {
     float: right;
-    border: 1px solid #77A;
-    background: #6e6;
     width: 100px;
-    text-align: center;
     cursor: pointer;
+    color: #ffffff;
+    font-size: 11px;
+    border-radius: 3px;
+    text-align: center;
+    background: #33C3F0;
+    padding: 4px 5px 2px 5px;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
 }
 .close_hint {
     margin: 5px;
@@ -548,19 +594,22 @@ input.hidden {
 }
 .comm_head {
     padding: 3px;
-    border: 1px solid #77A;
-    background-color: #DFD;
+    background-color: #D9D9D9;
 }
 .comm_minus {
-    background: url('image/minus.png') no-repeat;
+    background: url(../img/bottom.png) no-repeat;
+    background-size: 78%;
+    margin-top:5px;
 }
 .comm_plus {
-    background: url('image/plus.png') no-repeat;
+    background: url(../img/top.png) no-repeat;
+    background-size: 78%;
+    margin-top:5px;
 }
 .comm_minus, .comm_plus {
     float: right;
-    width: 19px;
-    height: 18px;
+    width: 20px;
+    height: 24px;
     cursor: pointer;
 }
 .comm_text {
@@ -571,14 +620,25 @@ input.hidden {
     cursor: pointer;
 }
 .strelka {
-    background: url(image/strelka.png) no-repeat;
-    border-left: 2px solid #000;
+    background: url(../img/right-arrow.png) no-repeat;
+    border-left: 1px solid #adadad;
+    background-position: -1px 0;
 }
 .strelka_2 {
-    background: url(image/strelka_2.png) no-repeat;
+    background: url(../img/right-arrow.png) no-repeat;
 }
 #hint {
     position: absolute;
     display: none;
     z-index: 100;
 }
+.contact-area {
+    resize:none;
+    width: 100%;
+    height: 150px;
+    }
+.testimonials-area {
+    resize:none;
+    width: 100% !important;
+    height: 150px;
+    }

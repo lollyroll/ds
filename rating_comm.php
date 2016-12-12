@@ -40,3 +40,7 @@ echo '<b>'.( $rating["plus"]-$rating["minus"]).'</b>';
 mysqli_close($db);
 }
 ?>
+<?php
+$del_date=$time-2592000;    //время в секундах (2592000 сек. = 30 дней)
+$res=mysqli_query($db,"DELETE FROM ocenka_comment WHERE date<".$del_date."");
+?>
