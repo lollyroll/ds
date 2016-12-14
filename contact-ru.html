@@ -54,10 +54,13 @@
           СТОИМОСТЬ
         </a>
       </li>
-      <li>
-        <a class="button-lang eng roboto" href="index.html">
-          RU
-        </a>
+       <li>
+        <div class="button-lang">
+          <a class="eng" href="index.html">
+            Eng
+          </a>
+          <span class="ru">Ru</span>
+        </div>
       </li>
     </ul>
   </div>
@@ -101,13 +104,9 @@
     <label for="exampleMessage">Сообщение</label>
     <textarea class="u-full-width contact-area" placeholder="Добрый день …" id="exampleMessage" name="message"></textarea>
     <div class="upload-file">
-      <input type="file" name="file">
+      <input type="file" name="fileFF">
     </div>
     <div class="button-send">
-      <label class="example-send-yourself-copy">
-        <input type="checkbox" id="check" name="checkbox">
-        <span class="label-body">Отправить копию себе</span>
-      </label>
       <input class="button-primary button-custom" type="submit" value="Отправить" name="from">
     </div>
     <input type="text" class="hidden" name="spam">

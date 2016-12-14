@@ -28,19 +28,19 @@
       SHCHERBINA DENIS<br>
       <span class="icon-logo roboto"></span><span class="text-small">Front-end Developer</span>
     </a>
-    <ul class="menu" id="smooth-menu">
+    <ul class="menu roboto" id="smooth-menu">
       <li>
         <a href="about.html" class="inner roboto">
           ABOUT
         </a>
       </li>
       <li>
-        <a class="inner roboto" href="index.html#jobs">
+        <a class="inner jobs roboto" href="index.html#jobs">
           PORTFOLIO
         </a>
       </li>
       <li>
-        <a href="testimonials.html" class="inner roboto">
+        <a href="testimonials.php" class="inner roboto">
           TESTIMONIALS
         </a>
       </li>
@@ -92,7 +92,7 @@ if (empty($spam)){
 $to = "zolotuhinmolodez@gmail.com"; // кому отправляем форму
 $from = "no-replay@mail.com"; // от кого отправлена форма
 $subject = "message for your site"; // тема сообщения
-$headers = "From: $from\r\nReplay-To: $from\r\nContent-type: text/plain; charset=utf-8\r\n";                              
+$headers = "From: $from\r\nReplay-To: $from\r\nContent-type: text/plain; charset=utf-8\r\n";
 if (mail($myemail, $tema, $message_to_myemail, $from)) 
 {echo "";
 }else{
@@ -108,9 +108,9 @@ Reason for contacting: $tema
 Message: $message
 the end";
 /* Отправляем сообщение, используя mail() функцию */
-  $from  = "From: $yourname <$email> \r\n Reply-To: $email \r\n"; 
-if (mail($myemail, $tema, $message_to_myemail, $from)) {
-    echo "";
+ $from  = "From: $yourname <$email> \r\n Reply-To: $email \r\n"; 
+if (mail($myemail, $tema, $message_to_myemail, $from)) 
+{echo "";
 }else{
     echo "Error! The letter was not sent!";}    
 ?>
@@ -137,13 +137,13 @@ return $data;
 function show_error($myError)
 {
 ?>
-    <p>Please correct the following error:</p>
+    <p>Пожалуйста исправьте следующую ошибку:</p>
     <?php echo $myError; ?>
     <?php
 exit();
 }
 ?>
-    <?php
+<?php
 if($_FILES['fileFF']['size'] > 0) {
   $output = '<h1>Спасибо! Ваш файл получен.</h1>';
   $to = "zolotuhinmolodez@gmail.com"; // адрес почты получателя

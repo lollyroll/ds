@@ -79,7 +79,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод соо
         </a>
       </li>
       <li>
-        <a href="testimonials-ru.html" class="inner roboto">
+        <a href="testimonials-ru.php" class="inner roboto">
           ОТЗЫВЫ
         </a>
       </li>
@@ -100,10 +100,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод соо
       </li>
        <li>
         <div class="button-sign">
-          <span class="lock">entry</span>
-          <a class="open" href="htaccess/adminka.php">
-          sign in
-          </a>
+          <span class="lock">войти</span>
+          <a class="open" href="htaccess/adminka.php">войти</a>
         </div>
         </li>
     </ul>

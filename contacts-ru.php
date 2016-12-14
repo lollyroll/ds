@@ -30,22 +30,22 @@
     </a>
     <ul class="menu roboto" id="smooth-menu">
       <li>
-        <a href="about-ru.html" class="inner">
+        <a href="about-ru.html" class="inner roboto">
           О СЕБЕ
         </a>
       </li>
       <li>
-        <a class="inner jobs" href="#jobs">
+        <a class="inner jobs roboto" href="index-ru.html#jobs">
           ПОРТФОЛИО
         </a>
       </li>
       <li>
-        <a href="testimonials-ru.html" class="inner">
+        <a href="testimonials-ru.php" class="inner roboto">
           ОТЗЫВЫ
         </a>
       </li>
       <li>
-        <a class="inner" href="contact-ru.html">
+        <a class="inner roboto" href="contact-ru.html">
           КОНТАКТЫ
         </a>
       </li>
@@ -121,7 +121,7 @@ if (mail($myemail, $tema, $message_to_myemail, $from))
 ?>
     <div class="mail-send">
       <p class="mail-text">Ваше сообщение было успешно отправлено!</p>
-      <a class="button-mail" href="index.html">
+      <a class="button-mail" href="index-ru.html">
         Вертуться на главную
       </a>
     </div>
@@ -146,6 +146,38 @@ function show_error($myError)
     <?php echo $myError; ?>
     <?php
 exit();
+}
+?>
+<?php
+if($_FILES['fileFF']['size'] > 0) {
+  $output = '<h1>Спасибо! Ваш файл получен.</h1>';
+  $to = "zolotuhinmolodez@gmail.com"; // адрес почты получателя
+  $from = "no-replay@mail.com"; // адрес почты отправителя
+  $subject = "Заголовок письма";
+  $message = "Содержимое письма";
+  $attachment = chunk_split(base64_encode(file_get_contents($_FILES['fileFF']['tmp_name'])));
+  $filename = $_FILES['fileFF']['name'];
+  $filetype = $_FILES['fileFF']['type'];
+  $boundary = md5(date('r', time())); // рандомное число
+  $headers = "From: " . $from . "\r\n"; // см. наиболее часто используемые заголовки
+  $headers .= "Reply-To: " . $from . "\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-Type: multipart/mixed; boundary=\"_1_$boundary\"";
+  $message="
+--_1_$boundary
+Content-Type: multipart/alternative; boundary=\"_2_$boundary\"
+--_2_$boundary
+Content-Type: text/plain; charset=\"utf-8\"
+Content-Transfer-Encoding: 7bit
+$message
+--_2_$boundary--
+--_1_$boundary
+Content-Type: \"$filetype\"; name=\"$filename\"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment // содержимое является вложенным
+$attachment
+--_1_$boundary--";
+  mail($to, $subject, $message, $headers);
 }
 ?>
   </div>
