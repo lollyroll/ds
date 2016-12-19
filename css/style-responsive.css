@@ -3,6 +3,9 @@
 .three.columns {
     width: 48%;
 }
+.three.columns.photo {
+    width: 200px;
+}
 #blocks .column, #blocks .columns {
     margin-left: 0px;
 }
@@ -44,39 +47,13 @@
     padding-left: 150px;
     margin: -155px 0px 10px 70px;
 }
-.skills {
-    float: right;
-    font-size: 17px;
-    padding: 0px 0 0 87px;
-}
-.skills-ru {
-    padding: 1px 4px 15px 65px;
-    font-size: 17px !important;
-    margin: 27px -65px;
-}
-.skills-list {
-    font-size: 16px;
-    margin: 80px 0 0 -226px;
-}
-.skills-list-ru {
-    font-size: 18px;
-    margin: -16px 0px 0 -281px;
-}
 .copyright {
     font-size: 12px;
     margin: 14px 14px 0;
     padding-left: 103px;
 }
-.foto {
-    background-size: 60%;
-    background-position: 17% 100%;
-}
-.hello {
-    font-size: 16px;
-    margin-top: -150px;
-}
 .contact-me {
-    margin-left: -82px;
+    text-align: center;
 }
 .about-castom {
     padding-bottom: 0 !important;
@@ -97,38 +74,12 @@ ul.menu li a.inner {
 .footer-absolute {
     position: fixed;
 }
-.hello {
-    font-size: 16px;
-    margin: -191px 0 0;
-}
-.foto {
-    background-size: 65%;
-    background-position: 5% 39%;
-}
-.skills {
-    padding: 0 80px 0 0;
-    margin: -4px -60px 0 0;
-    font-size: 16px !important;
-}
-.skills-ru {
-    padding: 0;
-    margin: 20px 0;
-    font-size: 16px !important;
-}
-.skills-list {
-    margin: 65px 0 0 -189px;
-    font-size: 15px;
-}
-.skills-list-ru {
-    font-size: 19px;
-    margin: 25px 0 0 -211px;
-}
 }
 
 @media all and (max-width: 816px) {
-.foto {
-    background-size: 30%;
-    background-position: 3% 48%;
+.photo {
+    margin: 45px 12px;
+    background-position: 0 0;
 }
 .main_menu {
     height: 100%;
@@ -140,6 +91,10 @@ ul.menu {
 }
 .three.columns {
     width: 100%;
+}
+.three.columns.photo {
+    width: 100px;
+    height: 100px;
 }
 .portfolio-block {
     padding: 155px;
@@ -196,22 +151,6 @@ ul.menu {
     padding-left: 150px;
     margin: -155px 0px 10px 70px;
 }
-.skills {
-    padding-left: 0px;
-    font-size: 18px;
-}
-.skills-list {
-    font-size: 16px;
-    padding-left: 5px;
-}
-.skills-list-ru {
-    padding: 15px 0 0 20px;
-    font-size: 18px;
-}
-.skills-list-ru {
-    font-size: 16px !important;
-    margin: -15px 0 0 -185px;
-}
 .copyright {
     font-size: 12px;
     margin: 14px 14px 0;
@@ -242,39 +181,14 @@ ul.menu li a.inner {
 }
 
 @media all and (max-width: 750px) {
- .foto {
-    background-size: 33%;
-    background-position: 5% 60%;
-}
 .footer {
     position: fixed;
     bottom: 0;
-}
-.hello {
-    font-size: 15px;
 }
 .about-text {
     font-size: 13px;
     padding-left: 115px;
     margin: -120px 0px 5px 0;
-}
-.skills {
-    font-size: 16px !important;
-    padding: 5px 80px 0px 15px;
-    margin: -18px -74px 0px 15px;
-}
-.skills-list > li {
-    font-size: 13px;
-}
-.skills-ru {
-    font-size: 16px !important;
-    padding: 14px -1px !important;
-}
-.skills-list-ru {
-    margin: -15px 0 0 -200px;
-}
-.skills-list-ru > li {
-    font-size: 13px;
 }
 .copyright {
     font-size: 9px;
@@ -319,38 +233,6 @@ ul.menu li a.inner {
     padding: 0 0 10px 0;
 }
 }
-@media all and (max-width: 650px) {
- .foto {
-    background-size: 38%;
-    background-position: 6% 74%;
-}
-}
-@media all and (max-width: 550px) {
- .foto {
-    background-size: 37%;
-    background-position: 7% 41%;
-}
-.skills {
-    font-size: 15px !important;
-    padding: 12px 163px 0px 20px;
-    margin: -18px -149px 0px 20px;
-
-}
-.skills-list {
-    font-size: 16px;
-    padding-left: 57px;
-}
-.hello {
-    margin: -246px 0 0;
-}
-.skills-ru {
-    font-size: 15px !important;
-    margin: 16px 12px 10px 53px;
-}
-.skills-list-ru {
-    margin: -15px 0 0 -155px;
-}
-}
 
 @media all and (min-width: 750px) {
 #contact-footer.footer-static {
@@ -364,7 +246,30 @@ ul.menu li a.inner {
 }
 }
 
+@media all and (max-width: 550px) {
+.column, .columns, .skills {
+    width: 69%;
+}
+.photo {
+    margin: 50px 30px 0 0 !important;
+}
+}
+
 @media all and (max-width: 500px) {
+.column, .columns, .skills {
+    width: 57%;
+}
+.photo {
+    margin: 50px 30px 0 15px !important;
+}
+.skills {
+    font-size: 13px;
+    padding: 0 55px 0px 50px !important;
+}
+.hello {
+    font-size: 15px;
+    margin-top: 20px;
+}
 ul.menu li a.inner {
     font-size: 8px;
 }
@@ -382,155 +287,19 @@ ul.menu li a.inner {
 .iframe-text p {
     margin: 5px 0 0 !important;
 }
-.skills {
-    font-size: 13px !important;
-    padding: 26px 145px 0 29px;
-    margin: -33px -137px 0px -27px;
-}
-.skills-ru {
-    font-size: 12px !important;
-    padding: 0 69px;
-    margin: 5px -56px 0px -68px;
-}
-.hello {
-    font-size: 11px;
-    margin: -230px 0 -15px;
-}
-.foto {
-    background-size: 32% !important;
-    background-position: 4% 10% !important;
-}
 .simply-list li {
     margin-left: -12px;
 }
-.skills-list > li {
-    margin-left: 87px;
-}
-.skills-list-ru > li {
-    margin-left: 87px;
-}
 .contact-me {
-    margin-left: -45px;
+    text-align: center;
 }
 .about-castom {
     padding-bottom: 41px !important;
-}
-.skills-list-ru {
-    margin: 0 0 0-208px;
-}
-.skills-list {
-    margin: 40px 0 0 -223px;
-    padding: 0;
 }
 .bottom-feather {
     margin-top: 135px;
 }
 .padd {
     padding: 0 !important;
-}
-}
-@media all and (max-width: 450px) {
- .foto {
-    background-size: 30% !important;
-}
-.skills-list {
-    margin: 60px 0 0 -223px;
-    padding: 0;
-}
-.skills {
-    font-size: 13px !important;
-    padding: 29px 138px 0 30px;
-    margin: -40px -137px 0px -27px;
-}
-    }
-    @media all and (max-width: 400px) { 
-.foto {
-    background-size: 36% !important;
-    background-position: 9% 17% !important;
-}
-.skills-list {
-    margin: 55px 0 0 -212px;
-}
-.skills-list-ru > li {
-    margin: 20px 62px;
-}
-.skills-ru {
-    padding: 0 69px;
-    font-size: 12px !important;
-    margin: 14px -50px 0px -30px;
-}
-}
-@media all and (max-width: 375px) {
-.foto {
-    background-size: 38% !important;
-}
-.bottom-feather {
-    margin-top: 65px;
-}
-.padd {
-    padding: 0 13px 0 13px !important;
-}
-.skills-list-ru > li {
-    margin: 0px 62px;
-}
-.skills-ru {
-    padding: 0 69px;
-    font-size: 12px !important;
-    margin: 0px -73px 0px -66px;
-}
-}
-
-@media all and (max-width: 320px) {
- .foto {
-    background-size: 48% !important;
-    background-position: 8% -12% !important;
-}
-.text {
-    padding: 0 0 20px 0;
-}
-.modal-iframe {
-    width: 80%;
-    margin-top: -100px;
-}
-.iframe-text {
-    font-size: 10px;
-    margin: 0 !important;
-}
-.iframe-text p {
-    margin: 5px 0 0 !important;
-}
-.foto {
-    background-size: 49% !important;
-    background-position: 7% -10% !important;
-}
-.skills {
-    font-size: 14px !important;
-    padding: 30px 164px 0 30px;
-    margin: -29px -149px 0px -170px;
-}
-.skills-ru {
-    font-size: 11px !important;
-    padding: 0 68px;
-    margin: 5px -67px 0px -68px;
-}
-.hello {
-    font-size: 11px;
-    margin: -260px 0 -15px;
-}
-.skills-list {
-    margin: 70px 0 0 -235px;
-}
-.skills-list-ru > li {
-    margin-left: 87px;
-}
-.contact-me {
-    margin-left: -60px;
-}
-.bottom-feather {
-    margin-top: -20px;
-    padding-bottom: 150px;
-}
-.padd {
-    padding: 0 5px 0 5px !important;
 }
 }

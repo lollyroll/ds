@@ -99,10 +99,11 @@ if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод соо
       <li>
         <div class="button-sign">
           <span class="lock">login</span>
-          <a class="open" href="htaccess/adminka.php">login
+          <a class="open" href="admin/adminka.php">
+            login
           </a>
         </div>
-        </li>
+      </li>
     </ul>
   </div>
 </div>
@@ -189,7 +190,7 @@ if ($number>0) {
 }
 ?>
 </div>
-<div class="footer-static">
+<div class="footer-absolute">
   <div class="container">
     <div class="copyright">Copyright
       &#169; 
