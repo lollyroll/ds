@@ -136,7 +136,6 @@ ul.menu {
 }
 .modal-iframe {
     width: 80%;
-    margin-top: -43px;
 }
 .iframe-text {
     font-size: 11px;
@@ -278,7 +277,6 @@ ul.menu li a.inner {
 }
 .modal-iframe {
     width: 80%;
-    margin-top: -100px;
 }
 .iframe-text {
     font-size: 10px;
@@ -301,5 +299,35 @@ ul.menu li a.inner {
 }
 .padd {
     padding: 0 !important;
+}
+img.img-modal {
+    width: 175%;
+}
+.right-block {
+    width: 100%;
+    text-align: center;
+    }
+.block-bottom-website {
+    width: 83%;
+    font-size: 14px;
+}
+.modal-iframe {
+    width: 77%;
+    margin-top: -88px;
+    margin-left: -164px !important;
+}
+.iframe-text {
+    width: 100%;
+}
+.bottom-close {
+    top: 10px !important;
+    right: 11px !important;
+    width: 25px !important;
+    height: 25px !important;
+    position: absolute !important;
+    background-color: #d1d1d1 !important;
+    background: url(../img/bottom-close-white.svg);
+    background-size: 25px;
+    background-position: center;
 }
 }

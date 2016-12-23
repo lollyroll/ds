@@ -55,8 +55,8 @@ body {
 }
 .simply-list {
     width: 100%;
+    padding: 15px 0;
     display: inline-block;
-    margin: 20px 0 10px 0px;
 }
 .simply-list li {
     margin: 0;
@@ -434,11 +434,13 @@ img.img-modal {
 .block-bottom-website {
     display: block;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 13px;
     text-align: center;
     border-radius: 2px;
-    background: #619fad;
+    background: #33C3F0;
     text-decoration: none;
+    padding: 3px 0 !important;
+    margin-top: 10px !important;
 }
 a.block-bottom-website:hover {
     color: #d9d9d9 !important;
@@ -465,7 +467,7 @@ a.link:hover {
 }
 .modal-iframe {
     width: 60%;
-    margin: -60px;
+    margin: 0;
     padding: 10px;
     background: #ffffff;
     border: none;
@@ -663,6 +665,10 @@ input.hidden {
 }
 .background-skills {
     background: #dceeff;
-    border-radius: 5px;
-    padding: 0px 5px;
+    border-radius: 10px;
+    padding: 0 10px;
+    display: inline-block;
+    margin: 1px 0px;
+    line-height: 22px;
+    font-size: 16px;
 }

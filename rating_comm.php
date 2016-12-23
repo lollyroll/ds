@@ -10,7 +10,7 @@ else $ocenka='';
 if ($ocenka!='' and $obj>0) {
  $ip=$_SERVER['REMOTE_ADDR'];
 
- $db=mysqli_connect("localhost","Ваш_логин","Ваш_пароль","Имя_базы") or die();
+ $db=mysqli_connect("localhost","vdldwzry_main","U8i9O3k2","vdldwzry_testimonials") or die();
  $res=mysqli_query($db,"SELECT count(id),ocenka FROM ocenka_comment
          WHERE comment_id='".$obj."' and ip=INET_ATON('".$ip."')");
 
