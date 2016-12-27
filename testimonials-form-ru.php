@@ -82,18 +82,13 @@ if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод соо
         </a>
       </li>
       <li>
-        <a href="testimonials-ru.php" class="inner roboto">
+        <a href="testimonials-form-ru.php" class="inner roboto">
           ОТЗЫВЫ
         </a>
       </li>
       <li>
         <a class="inner roboto" href="contact-ru.html">
           КОНТАКТЫ
-        </a>
-      </li>
-      <li>
-        <a class="inner roboto" href="price.html">
-          СТОИМОСТЬ
         </a>
       </li>
       <li>

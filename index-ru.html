@@ -53,11 +53,6 @@
         </a>
       </li>
       <li>
-        <a class="inner" href="price.html">
-          СТОИМОСТЬ
-        </a>
-      </li>
-      <li>
         <div class="button-lang">
           <a class="eng" href="index.html">
             Eng

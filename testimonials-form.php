@@ -82,7 +82,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод соо
         </a>
       </li>
       <li>
-        <a href="testimonials.php" class="inner roboto">
+        <a href="testimonials-form.php" class="inner roboto">
           TESTIMONIALS
         </a>
       </li>
@@ -120,25 +120,25 @@ echo '<form method="POST" action="'.$mess_url.'#last" class="add_comment"';
 echo 'name="add_comment" id="hint"><div class="close_hint">Закрыть</div>';
 echo '<textarea class="u-full-width testimonials-area" name="user_text"></textarea>';
 echo '<div style="margin:5px; float:left;">';
-echo 'Имя: <input type="text" name="mess_login" maxlength="20" value=""></div>';
+echo 'name: <input type="text" name="mess_login" maxlength="20" value=""></div>';
 
 echo '<div style="margin:5px; float:right;">'.$cod.' + '.$cod2.' = ';
 echo '<input type="hidden" name="prov_summa" value="'.md5($cod+$cod2).'">';
 echo '<input type="hidden" name="parent_id" value="0">';
 echo '<input type="hidden" name="f_parent" value="0">';
 echo '<input type="text" name="contr_cod" maxlength="4" size="4">&nbsp;';
-echo '<input type="submit" value="Отправить"></div>';
+echo '<input type="submit" value="submit"></div>';
 echo '</form>';
 
 echo '<form method="POST" action="'.$mess_url.'#last" class="add_comment">';
 echo 'Add a comment:';
 echo '<textarea class="u-full-width testimonials-area" name="user_text"></textarea>';
 echo '<div style="margin:5px; float:left;">';
-echo 'Имя: <input type="text" name="mess_login" maxlength="20" value=""></div>';
+echo 'name: <input type="text" name="mess_login" maxlength="20" value=""></div>';
 echo '<div style="margin:5px; float:right;">'.$cod.' + '.$cod2.' = ';
 echo '<input type="hidden" name="prov_summa" value="'.md5($cod+$cod2).'">';
 echo '<input type="text" name="contr_cod" maxlength="4" size="4">&nbsp;';
-echo '<input class="button-primary button-custom" type="submit" value="Отправить"></div>';
+echo '<input class="button-primary button-custom" type="submit" value="submit"></div>';
 echo '</form></div>';
 ?>
   <!-- блок с отзывами -->
